@@ -64,6 +64,10 @@ export default function ReservationForm() {
               required: true,
               message: "Podaj liczbę miejsc!",
             },
+            {
+              pattern: new RegExp("^([1-9]|10)$"),
+              message: "Podaj liczbę od 1 do 10!",
+            },
           ]}
         >
           <Input />

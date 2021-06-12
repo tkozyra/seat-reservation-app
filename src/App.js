@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ReservationSummaryView from "./components/ReservationSummaryView/ReservationSummaryView";
 import { ReservationView } from "./components/ReservationView";
 import { SeatSelectionView } from "./components/SeatSelectionView";
 
@@ -8,6 +9,9 @@ function App() {
       <Switch>
         <Route path="/wybor-miejsc">
           <SeatSelectionView />
+        </Route>
+        <Route path="/podsumowanie-rezerwacji">
+          <ReservationSummaryView />
         </Route>
         <Route path="/">
           <ReservationView />
