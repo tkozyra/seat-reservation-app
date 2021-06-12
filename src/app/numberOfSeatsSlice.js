@@ -19,5 +19,6 @@ export const numberOfSeatsSlice = createSlice({
 export const { setNumberOfSeats } = numberOfSeatsSlice.actions;
 
 export const selectNumberOfSeats = (state) => state.numberOfSeats.numberOfSeats;
+export const selectAdjacent = (state) => state.numberOfSeats.adjacent;
 
 export default numberOfSeatsSlice.reducer;

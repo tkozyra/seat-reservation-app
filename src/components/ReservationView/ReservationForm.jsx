@@ -1,5 +1,6 @@
 import { Form, Input, Button, Checkbox, Row } from "antd";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 import { setNumberOfSeats } from "../../app/numberOfSeatsSlice";
 
 const layout = {
@@ -26,11 +27,13 @@ const buttonLayout = {
 
 export default function ReservationForm() {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onFinish = (values) => {
     console.log("Success:", values);
     console.log(values.adjacent);
     dispatch(setNumberOfSeats(values));
+    history.push("/wybor-miejsc");
   };
 
   const onFinishFailed = (errorInfo) => {
